@@ -15,6 +15,8 @@ gem "sqlite3", "~> 1.4"
 # We need this
 gem "simple_form", github: "heartcombo/simple_form"
 
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
