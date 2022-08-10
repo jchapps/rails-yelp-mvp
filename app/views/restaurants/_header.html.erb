@@ -1,0 +1,15 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand fa-solid fa-plate-utensils" href="#">BIG FOODIE</a>
+    <i class="fa-solid fa-hippo fa-xl"></i>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <div><%= link_to "Home", restaurants_path, class: "nav-item nav-link active" %></div>
+        <div><%= link_to "Create Listing", new_restaurant_path, class: "nav-item nav-link active" %></div>
+      </div>
+    </div>
+  </nav>
+</div>

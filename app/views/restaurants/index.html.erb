@@ -1,11 +1,13 @@
-
-<% @restaurants.each do |restaurant|  %>
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <h2><%= link_to restaurant.name, restaurant_path(restaurant)%></h2>
-      <p><strong><%= restaurant.category %></strong></p>
-      <p><strong><%= restaurant.address %></strong></p>
+<%= render 'restaurants/header' %>
+<div class="container">
+  <% @restaurants.each do |restaurant|  %>
+    <div class="card-product">
+      <img src="http://source.unsplash.com/featured/?<%= restaurant.category %>+food&<%= rand(1000) %>)"/>
+      <div class="card-product-infos">
+        <h2><%= link_to restaurant.name, restaurant_path(restaurant)%></h2>
+        <p><strong><%= restaurant.category %></strong></p>
+        <p><strong><%= restaurant.address %></strong></p>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

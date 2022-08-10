@@ -1,0 +1,20 @@
+<%= render 'restaurants/header' %>
+<div class="container">
+  <div class="card text-center">
+    <div class="card-header">
+      <%= @restaurant.name %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= @restaurant.category.capitalize() %></h5>
+      <p class="card-text"><%= @restaurant.address %></p>
+      <p class="card-text"><%= @restaurant.phone_number %></p>
+      <% @restaurant.reviews.each do |review|  %>
+        <%= review.content %>
+        <%= review.rating.times do %>
+          <i class="fas fa-star"></i>
+        <% end %>
+      <% end %>
+      <div><%= link_to "Leave a review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %></div>
+    </div>
+  </div>
+</div>

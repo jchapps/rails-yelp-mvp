@@ -14,13 +14,15 @@
  *= require_self
  */
 
- .card-product {
+.card-product {
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
+  padding: 5px;
+  padding-bottom: 20px;
 }
 
 .card-product img {
@@ -38,11 +40,47 @@
 .card-product p {
   font-size: 12px;
   line-height: 1.4;
-  opacity: .7;
+  opacity: 0.7;
   margin-bottom: 0;
   margin-top: 8px;
 }
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    visibility: hidden;
+    margin-right: 1em;
+    font-size: 28px;
+    text-shadow: 0.5px 0.5px 3px #e67e23;
+  }
+
+  input:before {
+    cursor: pointer;
+    visibility: visible;
+    font-family: "Font Awesome 5 Free";
+    content: "\f005";
+    font-weight: 900;
+    color: #fd4;
+    transition: color 0.35s;
+  }
+
+  input:hover {
+    transform: scale(1.2) translate(-10%, -10%);
+  }
+
+  input:checked ~ input:before {
+    color: #fff;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: grey;
 }
